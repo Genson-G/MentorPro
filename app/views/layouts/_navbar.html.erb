@@ -1,41 +1,31 @@
- <nav class="light-blue lighten-2">
-    <div class="nav-wrapper container">
-      <a href="#!" class="brand-logo">Logo</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-            <% if user_signed_in? %>
-              
-              <% if current_user.has_role? :admin %>
-                <li>
-                  <%= link_to 'Admin', admin_path %>
-                </li>
-              <% end %>
+<!-- Main container -->
+<nav class="navbar">
+  <!-- Left side -->
 
-                  <% if current_user.profile %>
-                  <li>
-                    <%= link_to profile_path(current_user.profile) do %>
-                      <%= image_tag current_user.profile.image, width: '40px', class: 'circle left' %><%= link_to current_user.profile.full_name %>
-                 <% end %>
-                 </li> 
-            <% end %>
-          <li>
-           
-          <%= link_to '<i class="material-icons">exit_to_app</i>'. html_safe, destroy_user_session_path, method: :delete %>
-        </li>
-      <% else %>
-          <%= link_to '<i class="material-icons">launch</i>'. html_safe, new_user_session_path %>
-       <% end %>
-
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-      </ul>
+  <div class="navbar-left">
+    <div class="navbar-item">
+      <p class="subtitle is-5">
+        <strong>Find</strong> Mentors
+      </p>
     </div>
+    <div class="navbar-item">
+      <p class="control is-grouped">
+        <input class="input" type="text" placeholder="Look now!">
+        <button class="button">
+          Search
+        </button>
+      </p>
+    </div>
+  </div>
+
+  <!-- Right side -->
+  <div class="navbar-right">
+      <p class="control">
+        <% if user_signed_in? %>
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "button is-success" %>
+        <% else %>
+          <%= link_to "Sign in", new_user_session_path, class: "button is-success" %>
+       <% end %> 
+      </p>
+  </div>
 </nav>
