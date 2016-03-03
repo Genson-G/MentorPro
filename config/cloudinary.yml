@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: mentor-pro
+  api_key: '858776639155146'
+  api_secret: qQdOp5ONuK37fDykxpd9h_IksRw
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: mentor-pro
+  api_key: '858776639155146'
+  api_secret: qQdOp5ONuK37fDykxpd9h_IksRw
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: mentor-pro
+  api_key: '858776639155146'
+  api_secret: qQdOp5ONuK37fDykxpd9h_IksRw
+  enhance_image_tag: true
+  static_image_support: false

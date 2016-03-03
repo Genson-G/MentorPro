@@ -21,6 +21,8 @@ gem 'omniauth-facebook'
 gem 'omniauth-linkedin'
 gem 'exception_notification'
 gem "passenger"
+gem "cloudinary"
+gem 'invisible_captcha'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets

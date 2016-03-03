@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @mentee.user %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @mentee.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @mentee.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @mentee.email %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @mentee.bio %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @mentee.industry %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @mentee.company %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @mentee.rating %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @mentee.phone_number %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @mentee.country %>
+</p>
+
+<p>
+  <strong>Linkedin:</strong>
+  <%= @mentee.linkedin %>
+</p>
+
+<%= link_to 'Edit', edit_mentee_path(@mentee) %> |
+<%= link_to 'Back', mentees_path %>

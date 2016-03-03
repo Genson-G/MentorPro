@@ -11,7 +11,79 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218090310) do
+ActiveRecord::Schema.define(version: 20160303082154) do
+
+  create_table "mentees", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.text     "bio"
+    t.string   "industry"
+    t.string   "company"
+    t.decimal  "rating"
+    t.string   "phone_number"
+    t.string   "country"
+    t.string   "linkedin"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "image"
+  end
+
+  add_index "mentees", ["user_id"], name: "index_mentees_on_user_id"
+
+  create_table "mentors", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.text     "bio"
+    t.string   "industry"
+    t.string   "expertise"
+    t.decimal  "rating"
+    t.string   "phone_number"
+    t.string   "country"
+    t.string   "linkedin"
+    t.string   "investment"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "image"
+  end
+
+  add_index "mentors", ["user_id"], name: "index_mentors_on_user_id"
+
+  create_table "messages", force: :cascade do |t|
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.text     "message"
+    t.datetime "read"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "messages", ["receiver_id"], name: "index_messages_on_receiver_id"
+  add_index "messages", ["sender_id"], name: "index_messages_on_sender_id"
+
+  create_table "profiles", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "company"
+    t.text     "bio"
+    t.string   "industry"
+    t.string   "expertise"
+    t.string   "phone_number"
+    t.string   "mobile_number"
+    t.string   "country"
+    t.string   "linkedin"
+    t.string   "image"
+    t.string   "rating"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

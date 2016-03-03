@@ -1,0 +1,47 @@
+<%= simple_form_for(@mentee) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+      <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: 'form-control' %>
+    <br>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, class: 'form-control' %>
+    <br>
+    <%= f.label :email %>
+    <%= f.text_field :email, class: 'form-control' %>
+    <br>
+    <%= f.label :company %>
+    <%= f.text_field :company, class: 'form-control'   %>
+    <br>
+    <%= f.label :bio %>
+    <%= f.text_area :bio, class: 'form-control'  %>
+    <br>
+    <%= f.label :industry %>
+    <%= f.text_field :industry, class: 'form-control'   %>
+    <br>
+    <%= f.label :expertise %>
+    <%= f.text_field :expertise, class: 'form-control'   %>
+    <br>
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number, class: 'form-control'   %>
+    <br>
+    <%= f.label :country %>
+    <%= f.text_field :country, class: 'form-control'   %>
+    <br>
+    <%= f.label :linkedin %>
+    <%= f.text_field :linkedin, class: 'form-control'   %>
+    <br>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    <br>
+    <%= f.label :rating %>
+    <%= f.text_field :rating, class: 'form-control'   %>
+    <br>
+  </div>
+  <br>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-success' %>
+  </div>
+<% end %>
